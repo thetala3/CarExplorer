@@ -1,0 +1,22 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { VehicleSearchComponent } from './vehicle-search.component';
+
+describe('VehicleSearch', () => {
+  let component: VehicleSearchComponent;
+  let fixture: ComponentFixture<VehicleSearchComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [VehicleSearchComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(VehicleSearchComponent);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

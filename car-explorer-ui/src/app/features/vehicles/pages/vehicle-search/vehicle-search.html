@@ -1,0 +1,49 @@
+  <div class="container">
+  <div class="card">
+
+    <h2>🚗 Car Explorer</h2>
+
+    <div class="form-group">
+      <label>Search Make</label>
+      <input type="text"
+             [(ngModel)]="searchTerm"
+             (input)="filterMakes()"
+             placeholder="Type to search..." />
+    </div>
+
+    <div class="form-group">
+      <label>Select Make</label>
+      <select [(ngModel)]="selectedMakeId" (change)="onSearch()">
+        <option *ngFor="let make of filteredMakes" [value]="make.id">
+          {{ make.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Year</label>
+      <input type="number" [(ngModel)]="year" placeholder="e.g. 2015" (change)="onSearch()" />
+    </div>
+
+    <div class="results">
+      <div class="section">
+        <h3>Vehicle Types</h3>
+        <ul>
+          <li *ngFor="let type of vehicleTypes">
+            {{ type.name }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Models</h3>
+        <ul>
+          <li *ngFor="let model of models">
+            {{ model.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
