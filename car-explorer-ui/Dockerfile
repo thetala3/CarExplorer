@@ -1,14 +1,7 @@
-# Build Angular app
-FROM node:22 AS build
-WORKDIR /app
-
-COPY . .
-RUN npm install
-RUN npm run build
-
-# Serve with nginx
 FROM nginx:alpine
-COPY --from=build /app/dist/car-explorer-ui/browser /usr/share/nginx/html
+
+COPY dist/car-explorer-ui/browser /usr/share/nginx/html
+
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
