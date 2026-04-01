@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: CarExplorer.API/Dockerfile
+    ports:
+      - "5000:80"
+
+  ui:
+    build:
+      context: ./car-explorer-ui
+    ports:
+      - "4200:80"
