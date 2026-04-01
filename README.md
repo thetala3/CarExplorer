@@ -140,15 +140,6 @@ The application runs successfully locally using Docker.
 
 ---
 
-##  Future Improvements
-
-- Deploy using AWS ECS or Elastic Beanstalk
-- Add caching for API responses
-- Improve UI/UX
-- Add unit and integration tests
-
----
-
 ##  Submission Notes
 
 - Application fully functional locally
